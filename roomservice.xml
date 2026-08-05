@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="rl" fetch="https://github.com/rjfahad/" />
+    <remote name="los" fetch="https://github.com/LineageOS/" />
+    <remote name="hyper" fetch="https://github.com/HyperTeam/" />
+    <remote name="gf" fetch="https://github.com/greenforce-project/" />
+
+    <!-- Realme Even device tree -->
+    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="los-20" />
+
+    <!-- Vendor blobs -->
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-20" />
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
+
+    <!-- Kernel -->
+    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
+
+    <!-- Android 13 / LineageOS 20: MTK sepolicy -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-20" />
+
+    <!-- Android 13 / LineageOS 20: MediaTek HALs -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-20" />
+
+    <!-- Toolchain: Greenforce Clang 24 (fallback for servers without system clang) -->
+    <project path="prebuilts/clang/host/linux-x86/greenforce-clang" name="greenforce_clang" remote="gf" revision="main" clone-depth="1" />
+
+    <!-- RealmeParts (rjfahad fork: FPS overlay via SurfaceFlinger) -->
+    <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="rl" revision="lineage-20-fps" />
+
+
+</manifest>
