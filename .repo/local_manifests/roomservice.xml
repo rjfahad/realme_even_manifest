@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="rl" fetch="https://github.com/rjfahad/" />
+
+    <!-- Device tree -->
+    <project path="device/realme/RMX3191" name="device_realme_RMX3191" remote="rl" revision="rising-14" />
+
+    <!-- Vendor blobs -->
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="vendor-fix" />
+
+    <!-- Vendor IMS -->
+    <project path="vendor/realme/even-ims" name="vendor_realme_even-ims" remote="rl" revision="vendor-fix" />
+
+    <!-- Kernel (ReSukiSU branch) -->
+    <project path="kernel/realme/RMX3191" name="liquid_kernel_realme_even" remote="rl" revision="ReSukiSU" />
+
+</manifest>
