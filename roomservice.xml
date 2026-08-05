@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="rl" fetch="https://github.com/rjfahad/" />
+<remote name="los" fetch="https://github.com/LineageOS/" />
+<remote name="hyper" fetch="https://github.com/HyperTeam/" />
+<remote name="gf" fetch="https://github.com/greenforce-project/" />
+<remote name="pocketmode" fetch="https://github.com/nishant6342/" />
+
+<!-- Realme Even device tree -->
+<project path="device/realme/even"
+         name="device_realme_even"
+         remote="rl"
+         revision="los-21" />
+
+
+    <!-- Vendor blobs -->
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-21" />
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="fourteen" />
+
+    <!-- Kernel -->
+    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-21" />
+
+    <!-- Android 14 / LineageOS 21: MTK sepolicy -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-21" />
+
+    <!-- Android 14 / LineageOS 21: MediaTek HALs -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-21" />
+
+    <!-- Android 14 / LineageOS 21: Oplus HALs -->
+    <project path="hardware/oplus" name="android_hardware_oplus" remote="los" revision="lineage-21" />
+
+    <!-- RealmeParts -->
+    <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="hyper" revision="lineage-21" />
+
+    <!-- Pocket Mode -->
+    <project path="packages/apps/PocketMode" name="packages_apps_PocketMode" remote="pocketmode" revision="UNO" />
+
+    <!-- Toolchain: Greenforce Clang 24 -->
+    <project path="prebuilts/clang/host/linux-x86/greenforce-clang" name="greenforce_clang" remote="gf" revision="main" clone-depth="1" />
+
+
+</manifest>
