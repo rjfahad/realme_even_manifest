@@ -6,13 +6,14 @@ Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT676
 
 | Branch | ROM |
 |--------|-----|
+| `derp-14` | DerpFest 14 |
 | `universal` | ROM-agnostic AOSP base |
 
 ## Usage
 
 ```bash
 repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --git-lfs
-git clone -b universal https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
+git clone -b derp-14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
 
