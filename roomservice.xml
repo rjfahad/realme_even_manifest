@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="rl" fetch="https://github.com/rjfahad/" />
+    <remote name="rising" fetch="https://github.com/RisingOS-Revived" />
+    <remote name="gf" fetch="https://github.com/greenforce-project/" />
+
+    <!-- Override LineageOS Settings with RisingOS Settings (has Personalizations customization) -->
+    <remove-project name="LineageOS/android_packages_apps_Settings" />
+    <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="rising" revision="sixteen" />
+
+    <!-- Remove vendor/rising and vendor/lineage from main manifest to redefine -->
+    <remove-project name="android_vendor_rising" />
+    <remove-project name="android_vendor_lineage" />
+
+    <!-- Remove broken forgejo vendor/gms -->
+    <remove-project name="vendor_gms" />
+
+    <!-- Device tree (rjfahad fork) -->
+    <project path="device/realme/even" name="device_realme_even_rui4" remote="rl" revision="risingos-a16" />
+
+    <!-- Vendor blobs (Badmaneers RUI4) -->
+    <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="rl" revision="risingos-a16" />
+
+    <!-- Kernel (Badmaneers Zenium) -->
+    <project path="kernel/realme/even" name="zenium_realme_even" remote="rl" revision="rui4-clean" />
+
+    <!-- Toolchain: Greenforce Clang 24 -->
+    <project path="prebuilts/clang/host/linux-x86/greenforce-clang" name="greenforce_clang" remote="gf" revision="main" clone-depth="1" />
+
+    <!-- RisingOS vendor config -->
+    <project path="vendor/rising" name="android_vendor_rising" remote="rising" revision="sixteen-qpr2" />
+
+    <!-- RisingOS lineage vendor -->
+    <project path="vendor/lineage" name="android_vendor_lineage" remote="rising" revision="sixteen-qpr2" />
+
+    <!-- IMS vendor (RMX3191/even) -->
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
+
+</manifest>
