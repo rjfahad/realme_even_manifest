@@ -2,17 +2,25 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
+    <remote name="los" fetch="https://github.com/LineageOS/" />
 
-    <!-- Device tree -->
-    <project path="device/realme/RMX3191" name="device_realme_RMX3191" remote="rl" revision="derp-14" />
+    <!-- Device tree (OSS variant) -->
+    <project path="device/realme/RMX3191" name="device_realme_RMX3191" remote="rl" revision="derp-14-oss" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="vendor-fix" />
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="vendor-oss" />
 
     <!-- Vendor IMS -->
-    <project path="vendor/realme/even-ims" name="vendor_realme_even-ims" remote="rl" revision="vendor-fix" />
+    <project path="vendor/realme/even-ims" name="vendor_realme_even-ims" remote="rl" revision="vendor-oss" />
 
     <!-- Kernel (ReSukiSU branch) -->
     <project path="kernel/realme/RMX3191" name="liquid_kernel_realme_even" remote="rl" revision="ReSukiSU" />
+
+    <!-- OSS: source-built MTK sepolicy -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-21" />
+    <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="los" revision="lineage-21.0" />
+
+    <!-- OSS: hardware/mediatek HALs -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-21" />
 
 </manifest>
