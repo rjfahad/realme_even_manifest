@@ -23,4 +23,8 @@
     <!-- OSS: hardware/mediatek HALs -->
     <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-21" />
 
+    <!-- OSS: hardware/oplus + lineage compat namespaces (imported by vendor soong_namespace) -->
+    <project path="hardware/oplus" name="android_hardware_oplus" remote="los" revision="lineage-21" />
+    <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="los" revision="lineage-21.0" />
+
 </manifest>
