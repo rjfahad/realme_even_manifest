@@ -10,7 +10,8 @@
     <project path="device/realme/even" name="device_realme_even" remote="rl" revision="thirteen-rui2-oss" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/RMX3191" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-dev" />
+    <project path="vendor/realme/RMX3191" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-oss" />
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
     <project path="kernel/realme/RMX3191" name="liquid_kernel_realme_even" remote="rl" revision="ReSukiSU" />
