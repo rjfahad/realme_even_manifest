@@ -3,27 +3,32 @@
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
     <remote name="los" fetch="https://github.com/LineageOS/" />
+    <remote name="hyper" fetch="https://github.com/HyperTeam/" />
+    <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
 
-    <!-- Device tree (OSS variant) -->
-    <project path="device/realme/RMX3191" name="device_realme_RMX3191" remote="rl" revision="derp-14-oss" />
+    <!-- Realme C25s device tree -->
+    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="thirteen-rui2-dev" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="vendor-oss" />
+    <project path="vendor/realme/RMX3191" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-oss" />
 
-    <!-- Vendor IMS -->
-    <project path="vendor/realme/even-ims" name="vendor_realme_even-ims" remote="rl" revision="vendor-oss" />
-
-    <!-- Kernel (ReSukiSU branch) -->
+    <!-- Kernel -->
     <project path="kernel/realme/RMX3191" name="liquid_kernel_realme_even" remote="rl" revision="ReSukiSU" />
 
-    <!-- OSS: source-built MTK sepolicy -->
-    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-21" />
-    <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="los" revision="lineage-21.0" />
+    <!-- Android 13 / LineageOS 20: MTK sepolicy -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-20" />
+    <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="los" revision="lineage-20.0" />
 
-    <!-- OSS: hardware/mediatek HALs -->
-    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-21" />
+    <!-- Android 13 / LineageOS 20: MediaTek HALs -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-20" />
 
-    <!-- OSS: hardware/oplus + lineage compat namespaces (imported by vendor soong_namespace) -->
-    <project path="hardware/oplus" name="android_hardware_oplus" remote="los" revision="lineage-21" />
+    <!-- Oplus HALs -->
+    <project path="hardware/oplus" name="android_hardware_oplus" remote="los" revision="lineage-20" />
+
+    <!-- Toolchain (zyc clang 14) -->
+    <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
+
+    <!-- RealmeParts -->
+    <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="hyper" revision="lineage-20" />
 
 </manifest>
