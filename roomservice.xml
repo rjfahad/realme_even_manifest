@@ -7,10 +7,10 @@
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
 
     <!-- Realme C25s device tree -->
-    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="thirteen-rui2-dev" />
+    <project path="device/realme/even" name="device_realme_even" remote="rl" revision=""thirteen-rui2-oss />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/RMX3191" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-oss" />
+    <project path="vendor/realme/RMX3191" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-dev" />
 
     <!-- Kernel -->
     <project path="kernel/realme/RMX3191" name="liquid_kernel_realme_even" remote="rl" revision="ReSukiSU" />
