@@ -7,11 +7,11 @@
     <remote name="hyper" fetch="https://github.com/HyperTeam/" />
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
 
-    <!-- Realme RMX3191 device tree -->
-    <project path="device/realme/RMX3191" name="device_realme_RMX3191" remote="rl" revision="thirteen-rui2-oss" />
+    <!-- Realme Even device tree -->
+    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="thirteen-rui2-oss" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/RMX3191" name="vendor_realme_RMX3191" remote="rl" revision="thirteen-rui2-oss" />
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-oss" />
     <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
