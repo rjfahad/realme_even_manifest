@@ -2,20 +2,19 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
-    <remote name="cumaRull" fetch="https://github.com/cumaRull/" />
     <remote name="los" fetch="https://github.com/LineageOS/" />
     <remote name="hyper" fetch="https://github.com/HyperTeam/" />
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
 
     <!-- Realme Even device tree -->
-    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="thirteen-rui2-oss" />
+    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="los-20" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="thirteen-rui2-oss" />
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-20" />
     <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
-    <project path="kernel/realme/RMX3191" name="kernel_realme_RMX3191" remote="cumaRull" revision="rui2-backupx" />
+    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
 
     <!-- Android 13 / LineageOS 20: MTK sepolicy -->
     <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-20" />
