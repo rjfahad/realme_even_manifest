@@ -14,7 +14,7 @@
     <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
-    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="rui2-backupx" />
+    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
 
     <!-- Android 13 / LineageOS 20: MTK sepolicy -->
     <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-20" />
