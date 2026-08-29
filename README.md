@@ -9,6 +9,8 @@ Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT676
 | `los-20` | LineageOS 20 | 13 | Trebuchet (RAM info), RealmeParts (FPS overlay, HBM, OTG, Game Mode), QUIK messaging |
 | `los-21` | LineageOS 21 | 14 | RealmeParts (FPS overlay, HBM, OTG, Game Mode), Pocket Mode |
 | `crdroid` | crDroid | 13 | RealmeParts (FPS overlay) |
+| `sparkos` | SparkOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
+| `cherish` | CherishOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
 | `derp-14` | DerpFest 14 | 14 | *(unmaintained)* |
 
 ## Usage
