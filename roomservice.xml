@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <remote name="rl" fetch="https://github.com/rjfahad/" />
-    <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
     <remote name="bad" fetch="https://github.com/Badmaneers/" />
+    <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
+    <remote name="rl" fetch="https://github.com/rjfahad/" />
 
-    <!-- Realme Even device tree (rjfahad fork) -->
-    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="cherish-a14" />
+    <!-- Device tree (Badmaneers RUI4) -->
+    <project path="device/realme/even" name="device_realme_even_rui4" remote="bad" revision="lineage-21" />
 
-    <!-- Vendor blobs (rjfahad fork) -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="cherish-a14" />
+    <!-- Vendor blobs (Badmaneers RUI4) -->
+    <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="bad" revision="main-oss" />
 
-    <!-- Kernel -->
+    <!-- Kernel (Badmaneers Zenium) -->
     <project path="kernel/realme/even" name="zenium_realme_even" remote="bad" revision="rui4-main" />
 
     <!-- Toolchain (zyc clang 14) -->
