@@ -2,12 +2,17 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
-    <remote name="los" fetch="https://github.com/LineageOS/" />
-    <remote name="hyper" fetch="https://github.com/HyperTeam/" />
-    <remote name="pocketmode" fetch="https://github.com/nishant6342/" />
+<remote name="los" fetch="https://github.com/LineageOS/" />
+<remote name="hyper" fetch="https://github.com/HyperTeam/" />
+<remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
+<remote name="pocketmode" fetch="https://github.com/nishant6342/" />
 
-    <!-- Realme Even device tree -->
-    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="los-21" />
+<!-- Realme Even device tree -->
+<project path="device/realme/even"
+         name="device_realme_even"
+         remote="rl"
+         revision="los-21" />
+
 
     <!-- Vendor blobs -->
     <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-21" />
@@ -30,5 +35,9 @@
 
     <!-- Pocket Mode -->
     <project path="packages/apps/PocketMode" name="packages_apps_PocketMode" remote="pocketmode" revision="UNO" />
+
+    <!-- Toolchain (zyc clang 14) -->
+    <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
+
 
 </manifest>
