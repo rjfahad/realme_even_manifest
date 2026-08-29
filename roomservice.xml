@@ -9,7 +9,7 @@
     <project path="device/realme/even" name="device_realme_even" remote="rl" revision="cherish" />
 
     <!-- Vendor blobs -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-20" />
+    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="cherish" />
     <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
