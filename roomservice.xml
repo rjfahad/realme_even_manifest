@@ -2,21 +2,38 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
-    <remote name="hyper" fetch="https://github.com/HyperTeam/" />
+    <remote name="lineage" fetch="https://github.com/LineageOS/" />
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
+    <remote name="bad" fetch="https://github.com/Badmaneers/" />
+    <remote name="dolby" fetch="https://github.com/swiitch-OFF-Lab/" />
+    <remote name="nishant" fetch="https://github.com/nishant6342/" />
 
-    <!-- Realme Even device tree -->
+    <!-- Realme Even device tree (rjfahad fork) -->
     <project path="device/realme/even" name="device_realme_even" remote="rl" revision="cherish-a14" />
 
-    <!-- Vendor blobs -->
+    <!-- Vendor blobs (rjfahad fork) -->
     <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="cherish-a14" />
-    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
-    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
+    <project path="kernel/realme/even" name="zenium_realme_even" remote="bad" revision="rui4-main" />
+
+    <!-- Oplus hardware -->
+    <project path="hardware/oplus" name="android_hardware_oplus" remote="lineage" revision="lineage-21" />
+
+    <!-- Mediatek hardware -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="lineage" revision="lineage-21" />
+
+    <!-- Mediatek sepolicy -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="lineage" revision="lineage-21" />
 
     <!-- Toolchain (zyc clang 14) -->
     <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
+
+    <!-- Pocket Mode -->
+    <project path="packages/apps/PocketMode" name="packages_apps_PocketMode" remote="nishant" revision="UNO" />
+
+    <!-- Dolby -->
+    <project path="hardware/dolby" name="hardware_dolby" remote="dolby" revision="sony-1.2" />
 
     <!-- RealmeParts (rjfahad fork: FPS overlay via SurfaceFlinger) -->
     <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="rl" revision="lineage-20-fps" />
