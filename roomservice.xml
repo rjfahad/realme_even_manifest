@@ -12,7 +12,7 @@
     <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="bad" revision="main-oss" />
 
     <!-- Kernel (Badmaneers Zenium) -->
-    <project path="kernel/realme/even" name="zenium_realme_even" remote="bad" revision="rui4-main" />
+    <project path="kernel/realme/even" name="zenium_realme_even" remote="bad" revision="rui4-clean" />
 
     <!-- Toolchain (zyc clang 14) -->
     <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
