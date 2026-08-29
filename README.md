@@ -4,22 +4,28 @@ Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT676
 
 ## Branches
 
-| Branch | ROM |
-|--------|-----|
-| `derp-14` | DerpFest 14 |
-| `universal` | ROM-agnostic AOSP base |
+| Branch | ROM | Android | Extras |
+|--------|-----|---------|--------|
+| `los-20` | LineageOS 20 | 13 | Trebuchet (RAM info), RealmeParts (FPS overlay, HBM, OTG, Game Mode), QUIK messaging |
+| `los-21` | LineageOS 21 | 14 | RealmeParts (FPS overlay, HBM, OTG, Game Mode), Pocket Mode |
+| `crdroid` | crDroid | 13 | RealmeParts (FPS overlay) |
+| `derp-14` | DerpFest 14 | 14 | *(unmaintained)* |
 
 ## Usage
 
+Clone the appropriate branch into `.repo/local_manifests` before running `repo sync`:
+
 ```bash
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --git-lfs
-git clone -b derp-14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0
+git clone -b los-21 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
 
-Or copy manually:
+Replace `-b los-21` with the desired branch (`los-20`, `crdroid`, `derp-14`).
+
+Or copy `roomservice.xml` manually:
 
 ```bash
 mkdir -p .repo/local_manifests
-cp .repo/local_manifests/roomservice.xml .repo/local_manifests/
+cp roomservice.xml .repo/local_manifests/
 ```
