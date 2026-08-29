@@ -11,7 +11,7 @@ Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT676
 | `crdroid` | crDroid | 13 | RealmeParts (FPS overlay) |
 | `sparkos` | SparkOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
 | `cherish` | CherishOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
-| `cherish-a14` | CherishOS | 14 | RealmeParts (FPS overlay, HBM, OTG, Game Mode), Zenium kernel (RUI4), PocketMode, Dolby |
+| `cherish-a14` | CherishOS | 14 | Badmaneers RUI4 (device/vendor/kernel), RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
 | `derp-14` | DerpFest 14 | 14 | *(unmaintained)* |
 
 ## Usage
@@ -46,6 +46,7 @@ repo init -u https://github.com/CherishOS/android_manifest.git -b fourteen
 git clone -b cherish-a14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
+Uses Badmaneers RUI4 device/vendor/kernel, RealmeParts, and zyc clang toolchain.
 
 Or copy `roomservice.xml` manually:
 
