@@ -19,7 +19,7 @@ Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT676
 Clone the appropriate branch into `.repo/local_manifests` before running `repo sync`:
 
 ```bash
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
+repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
 git clone -b los-20 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
@@ -28,21 +28,21 @@ Replace `-b los-20` with the desired branch (`los-21`, `crdroid`, `sparkos`, `ch
 
 For SparkOS:
 ```bash
-repo init -u https://github.com/Spark-Rom/manifest -b pyro-next
+repo init -u https://github.com/Spark-Rom/manifest -b pyro-next --git-lfs
 git clone -b sparkos https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
 
 For CherishOS (Android 13):
 ```bash
-repo init -u https://github.com/CherishOS/android_manifest.git -b tiramisu
+repo init -u https://github.com/CherishOS/android_manifest.git -b tiramisu --git-lfs
 git clone -b cherish https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
 
 For CherishOS (Android 14):
 ```bash
-repo init -u https://github.com/CherishOS/android_manifest.git -b fourteen
+repo init -u https://github.com/CherishOS/android_manifest.git -b fourteen --git-lfs
 git clone -b cherish-a14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync
 ```
