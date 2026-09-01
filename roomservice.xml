@@ -29,7 +29,4 @@
     <!-- RisingOS lineage vendor -->
     <project path="vendor/lineage" name="android_vendor_lineage" remote="rising" revision="sixteen-qpr2" />
 
-    <!-- RealmeParts (rjfahad fork: FPS overlay via SurfaceFlinger) -->
-    <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="rl" revision="lineage-20-fps" />
-
 </manifest>
