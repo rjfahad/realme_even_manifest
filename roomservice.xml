@@ -2,7 +2,12 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
+    <remote name="rising" fetch="https://github.com/RisingOS-Revived" />
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
+
+    <!-- Override LineageOS Settings with RisingOS Settings (has Personalizations customization) -->
+    <remove-project name="LineageOS/android_packages_apps_Settings" />
+    <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="rising" revision="sixteen" />
 
     <!-- Remove vendor/rising and vendor/lineage from main manifest to redefine -->
     <remove-project name="android_vendor_rising" />
