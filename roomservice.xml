@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+    <!-- Exclude GMS (not needed) -->
+    <remove-project name="vendor_gms" />
+
     <!-- Remotes -->
     <remote name="rl" fetch="https://github.com/rjfahad/" />
 
