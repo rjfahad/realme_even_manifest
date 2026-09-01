@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <remote name="bad" fetch="https://github.com/Badmaneers/" />
-    <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
+    <!-- Remotes -->
     <remote name="rl" fetch="https://github.com/rjfahad/" />
 
-    <!-- Device tree (Badmaneers RUI4) -->
-    <project path="device/realme/even" name="device_realme_even_rui4" remote="bad" revision="lineage-21" />
+    <!-- Device tree (rjfahad RUI4) -->
+    <project path="device/realme/even" name="device_realme_even_rui4" remote="rl" revision="cherish-a14-rui4" />
 
-    <!-- Vendor blobs (Badmaneers RUI4) -->
-    <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="bad" revision="main-oss" />
+    <!-- Vendor blobs (rjfahad RUI4) -->
+    <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="rl" revision="cherish-a14-rui4" />
 
-    <!-- Kernel (Badmaneers Zenium) -->
-    <project path="kernel/realme/even" name="zenium_realme_even" remote="bad" revision="rui4-clean" />
+    <!-- Kernel (rjfahad Zenium) -->
+    <project path="kernel/realme/even" name="zenium_realme_even" remote="rl" revision="rui4-clean" />
 
-    <!-- Toolchain (zyc clang 14) -->
-    <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
+    <!--Oplus hw -->
+    <project path="hardware/oplus" name="LineageOS/android_hardware_oplus" remote="github" revision="lineage-21" />
+    
+    <!-- Mediatek hw -->
+    <project name="LineageOS/android_hardware_mediatek" path="hardware/mediatek" remote="github" revision="lineage-21" />
 
-    <!-- RealmeParts (rjfahad fork: FPS overlay via SurfaceFlinger) -->
-    <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="rl" revision="lineage-20-fps" />
+    <!-- Mediatek sepolicy -->
+    <project name="LineageOS/android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="github" revision="lineage-21" />
+
+    <!-- Pocket Mode -->
+    <project name="nishant6342/packages_apps_PocketMode" path="packages/apps/PocketMode" remote="github" revision="UNO" />
+
+    <!-- Dolby -->
+    <project name="swiitch-OFF-Lab/hardware_dolby.git" path="hardware/dolby" remote="github" revision="sony-1.2" />
 
 </manifest>
