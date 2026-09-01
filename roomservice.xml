@@ -2,34 +2,34 @@
 <manifest>
 
     <remote name="rl" fetch="https://github.com/rjfahad/" />
-    <remote name="los" fetch="https://github.com/LineageOS/" />
-    <remote name="hyper" fetch="https://github.com/HyperTeam/" />
     <remote name="clangsantoni" fetch="https://gitlab.com/clangsantoni/" />
 
-    <!-- Realme Even device tree -->
-    <project path="device/realme/even" name="device_realme_even" remote="rl" revision="los-20" />
+    <!-- Remove vendor/rising and vendor/lineage from main manifest to redefine -->
+    <remove-project name="android_vendor_rising" />
+    <remove-project name="android_vendor_lineage" />
 
-    <!-- Vendor blobs -->
-    <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="los-20" />
-    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
+    <!-- Remove broken forgejo vendor/gms -->
+    <remove-project name="vendor_gms" />
 
-    <!-- Kernel -->
-    <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
+    <!-- Device tree (rjfahad fork) -->
+    <project path="device/realme/even" name="device_realme_even_rui4" remote="rl" revision="risingos-a16" />
 
-    <!-- Android 13 / LineageOS 20: MTK sepolicy -->
-    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" revision="lineage-20" />
+    <!-- Vendor blobs (Badmaneers RUI4) -->
+    <project path="vendor/realme/even" name="vendor_realme_even_rui4" remote="rl" revision="risingos-a16" />
 
-    <!-- Android 13 / LineageOS 20: MediaTek HALs -->
-    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-20" />
+    <!-- Kernel (Badmaneers Zenium) -->
+    <project path="kernel/realme/even" name="zenium_realme_even" remote="rl" revision="rui4-clean" />
 
     <!-- Toolchain (zyc clang 14) -->
     <project path="prebuilts/clang/host/linux-x86/mylitle-clang" name="zyc_clang" remote="clangsantoni" revision="14" />
 
+    <!-- RisingOS vendor config -->
+    <project path="vendor/rising" name="android_vendor_rising" remote="rising" revision="sixteen-qpr2" />
+
+    <!-- RisingOS lineage vendor -->
+    <project path="vendor/lineage" name="android_vendor_lineage" remote="rising" revision="sixteen-qpr2" />
+
     <!-- RealmeParts (rjfahad fork: FPS overlay via SurfaceFlinger) -->
     <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="rl" revision="lineage-20-fps" />
-
-    <!-- Trebuchet (rjfahad fork: RAM info in recents) -->
-    <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
-    <project path="packages/apps/Trebuchet" name="android_packages_apps_Trebuchet" remote="rl" revision="lineage-20.0-ram" />
 
 </manifest>
