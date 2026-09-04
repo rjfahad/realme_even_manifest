@@ -35,6 +35,6 @@
     <project path="vendor/lineage" name="android_vendor_lineage" remote="rising" revision="sixteen-qpr2" />
 
     <!-- IMS vendor (RMX3191/even) -->
-    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="fourteen" />
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
 </manifest>
