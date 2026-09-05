@@ -1,55 +1,30 @@
-# Realme Even (RMX3191) — ROM Build Manifests
+# Realme Even (RMX3195) — CherishOS (Android 13) Manifest
 
-Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT6768).
-
-## Branches
-
-| Branch | ROM | Android | Extras |
-|--------|-----|---------|--------|
-| `los-20` | LineageOS 20 | 13 | Trebuchet (RAM info), RealmeParts (FPS overlay, HBM, OTG, Game Mode), QUIK messaging |
-| `los-21` | LineageOS 21 | 14 | RealmeParts (FPS overlay, HBM, OTG, Game Mode), Pocket Mode |
-| `crdroid` | crDroid | 13 | RealmeParts (FPS overlay) |
-| `sparkos` | SparkOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
-| `cherish` | CherishOS | 13 | RealmeParts (FPS overlay, HBM, OTG, Game Mode) |
-| `cherish-a14` | CherishOS | 14 | RealmeParts (FPS overlay, HBM, OTG, Game Mode), Zenium kernel (RUI4), PocketMode, Dolby |
-| `derp-14` | DerpFest 14 | 14 | *(unmaintained)* |
-
-## Usage
-
-Clone the appropriate branch into `.repo/local_manifests` before running `repo sync`:
+## Build Instructions
 
 ```bash
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
-git clone -b los-20 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
-repo sync
-```
-
-Replace `-b los-20` with the desired branch (`los-21`, `crdroid`, `sparkos`, `cherish`, `cherish-a14`).
-
-For SparkOS:
-```bash
-repo init -u https://github.com/Spark-Rom/manifest -b pyro-next --git-lfs
-git clone -b sparkos https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
-repo sync
-```
-
-For CherishOS (Android 13):
-```bash
+# Initialize CherishOS manifest
 repo init -u https://github.com/CherishOS/android_manifest.git -b tiramisu --git-lfs
+
+# Clone device manifest
 git clone -b cherish https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
-repo sync
+
+# Sync source
+repo sync -c --no-tags --no-clone-bundle -j$(nproc)
+
+# Build
+source build/envsetup.sh
+lunch cherish_even-eng
+mka bacon -j$(nproc)
 ```
 
-For CherishOS (Android 14):
-```bash
-repo init -u https://github.com/CherishOS/android_manifest.git -b fourteen --git-lfs
-git clone -b cherish-a14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
-repo sync
-```
+## Branches Used
 
-Or copy `roomservice.xml` manually:
-
-```bash
-mkdir -p .repo/local_manifests
-cp roomservice.xml .repo/local_manifests/
-```
+| Component | Branch |
+|-----------|--------|
+| Device tree | `cherish` |
+| Vendor blobs | `cherish` |
+| IMS | `sixteen-qpr1` (RMX2020-ims) |
+| Kernel | `los-20` |
+| Toolchain | zyc clang 14 |
+| RealmeParts | `lineage-20-fps` |
