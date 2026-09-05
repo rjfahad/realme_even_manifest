@@ -1,25 +1,37 @@
-# Realme Even (RMX3191) — ROM Build Manifests
+# Realme Even (RMX3195) — DerpFest 14 Manifest (Unmaintained)
 
-Local manifests for building custom ROMs for Realme Even (RMX3191/RMX3195, MT6768).
-
-## Branches
-
-| Branch | ROM |
-|--------|-----|
-| `derp-14` | DerpFest 14 |
-| `universal` | ROM-agnostic AOSP base |
-
-## Usage
+## Build Instructions
 
 ```bash
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --git-lfs
+# Initialize LineageOS 21 manifest (DerpFest is based on LOS 21)
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+
+# Clone device manifest
 git clone -b derp-14 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
-repo sync
+
+# Sync source
+repo sync -c --no-tags --no-clone-bundle -j$(nproc)
+
+# Build
+source build/envsetup.sh
+lunch <target>
+mka bacon -j$(nproc)
 ```
 
-Or copy manually:
+## Branches Used
 
-```bash
-mkdir -p .repo/local_manifests
-cp .repo/local_manifests/roomservice.xml .repo/local_manifests/
-```
+| Component | Branch |
+|-----------|--------|
+| Device tree | `derp-14-oss` (RMX3191) |
+| Vendor blobs | `vendor-oss` |
+| Vendor IMS | `vendor-oss` (even-ims) |
+| Kernel | `ReSukiSU` (liquid kernel) |
+| MTK HALs | `lineage-21` |
+| MTK sepolicy | `lineage-21` |
+| Oplus HALs | `lineage-21` |
+
+## Notes
+
+- **Unmaintained** — use at your own risk
+- Uses OSS device/vendor trees (RMX3191 path)
+- All source-built HALs (no prebuilt blobs)
