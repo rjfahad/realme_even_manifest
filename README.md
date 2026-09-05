@@ -23,7 +23,7 @@ brunch even
 |-----------|--------|
 | Device tree | `crdroid-13.0` (based on los-20) |
 | Vendor blobs | `crdroid-13.0` (based on los-20) |
-| IMS | `sixteen-qpr1` (RMX2020-ims) |
+| IMS | `sixteen-qpr1` (RMX3191-ims) |
 | Kernel | `los-20` |
 | MTK HALs | `lineage-20` |
 | MTK sepolicy | `lineage-20` |
