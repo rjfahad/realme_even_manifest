@@ -24,7 +24,7 @@ mka bacon -j$(nproc)
 |-----------|--------|
 | Device tree | `cherish` |
 | Vendor blobs | `cherish` |
-| IMS | `sixteen-qpr1` (RMX2020-ims) |
+| IMS | `sixteen-qpr1` (RMX3191-ims) |
 | Kernel | `los-20` |
 | Toolchain | zyc clang 14 |
 | RealmeParts | `lineage-20-fps` |
