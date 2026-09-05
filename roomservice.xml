@@ -10,7 +10,7 @@
 
     <!-- Vendor blobs -->
     <project path="vendor/realme/even" name="vendor_realme_even" remote="rl" revision="cherish" />
-    <project path="vendor/realme/RMX2020-ims" name="vendor_realme_RMX2020-ims" remote="rl" revision="sixteen-qpr1" />
+    <project path="vendor/realme/RMX3191-ims" name="vendor_realme_RMX3191-ims" remote="rl" revision="thirteen" />
 
     <!-- Kernel -->
     <project path="kernel/realme/even" name="kernel_realme_even" remote="rl" revision="los-20" />
