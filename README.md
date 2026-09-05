@@ -14,7 +14,7 @@ repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 # Build
 source build/envsetup.sh
-lunch even-user
+lunch arrow_even-user
 mka bacon -j$(nproc)
 ```
 
@@ -24,7 +24,7 @@ mka bacon -j$(nproc)
 |-----------|--------|
 | Device tree | `arrow-13.0` (based on los-20) |
 | Vendor blobs | `arrow-13.0` (based on los-20) |
-| IMS | `sixteen-qpr1` (RMX3191-ims) |
+| IMS | `thirteen` (RMX3191-ims) |
 | Kernel | `los-20` |
 | MTK HALs | `lineage-20` |
 | MTK sepolicy | `lineage-20` |
