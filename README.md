@@ -14,7 +14,8 @@ repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 # Build
 source build/envsetup.sh
-brunch even
+lunch crdroid_even-user
+mka bacon -j$(nproc)
 ```
 
 ## Branches Used
@@ -23,7 +24,7 @@ brunch even
 |-----------|--------|
 | Device tree | `crdroid-13.0` (based on los-20) |
 | Vendor blobs | `crdroid-13.0` (based on los-20) |
-| IMS | `sixteen-qpr1` (RMX3191-ims) |
+| IMS | `thirteen` (RMX3191-ims) |
 | Kernel | `los-20` |
 | MTK HALs | `lineage-20` |
 | MTK sepolicy | `lineage-20` |
