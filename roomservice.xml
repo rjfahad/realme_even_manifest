@@ -71,7 +71,7 @@
     <project path="external/themelib" name="external_themelib" remote="afx" revision="13" />
     <project path="external/colorkt" name="external_colorkt" remote="afx" revision="13" />
     <project path="external/piex" name="external_piex" remote="afx" revision="13" />
-    <project path="external/vixl" name="external_vixl" remote="afx" revision="13x" />
+    <project path="external/vixl" name="platform/external/vixl" remote="aosp" revision="refs/tags/android-13.0.0_r82" />
     <project path="external/gptfdisk" name="external_gptfdisk" remote="afx" revision="13" />
     <project path="external/libxml2" name="external_libxml2" remote="afx" revision="13" />
     <project path="external/webp" name="external_webp" remote="afx" revision="13" />
