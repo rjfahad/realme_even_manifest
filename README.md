@@ -14,7 +14,7 @@ repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 # Build
 source build/envsetup.sh
-lunch cherish_even-eng
+lunch cherish_even-user
 mka bacon -j$(nproc)
 ```
 
