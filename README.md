@@ -1,8 +1,8 @@
-# Realme Even (RMX3191) — LineageOS 20 Manifest
+# Realme Even (RMX3191) — Evolution X Manifest
 
 ```bash
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
-git clone -b los-20 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
+repo init -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
+git clone -b evolutionx https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 source build/envsetup.sh
@@ -14,8 +14,8 @@ mka bacon -j$(nproc)
 
 | Component | Path | Branch |
 |-----------|------|--------|
-| Device tree | `device/realme/even` | `los-20` |
-| Vendor blobs | `vendor/realme/even` | `los-20` |
+| Device tree | `device/realme/even` | `evolutionx` |
+| Vendor blobs | `vendor/realme/even` | `evolutionx` |
 | IMS | `vendor/realme/RMX3191-ims` | `thirteen` |
 | Kernel | `kernel/realme/even` | `los-20` |
 | MTK sepolicy | `device/mediatek/sepolicy_vndr` | `lineage-20` |
