@@ -14,7 +14,7 @@ repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 # Build
 source build/envsetup.sh
-lunch lineage_even-eng
+lunch lineage_even-ap2a-eng
 mka bacon -j$(nproc)
 ```
 
