@@ -7,7 +7,7 @@ repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 source build/envsetup.sh
 lunch evolution_even-user
-mka bacon -j$(nproc)
+m evolution
 ```
 
 ## Manifest Contents
