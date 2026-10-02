@@ -1,12 +1,12 @@
-# Realme Even (RMX3191) — LineageOS 20 Manifest
+# Realme Even (RMX3191) — Project Elixir (Android 13) Manifest
 
 ```bash
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
-git clone -b los-20 https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
+repo init -u https://github.com/Project-Elixir/manifest -b Tiramisu --git-lfs
+git clone -b elixir https://github.com/rjfahad/realme_even_manifest.git .repo/local_manifests
 repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 source build/envsetup.sh
-lunch lineage_even-user
+lunch aosp_even-userdebug
 mka bacon -j$(nproc)
 ```
 
