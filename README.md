@@ -6,7 +6,7 @@ git clone -b evolutionx https://github.com/rjfahad/realme_even_manifest.git .rep
 repo sync -c --no-tags --no-clone-bundle -j$(nproc)
 
 source build/envsetup.sh
-lunch lineage_even-cp2a-user
+lunch evolution_even-user
 mka bacon -j$(nproc)
 ```
 
